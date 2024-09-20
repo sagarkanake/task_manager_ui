@@ -1,0 +1,63 @@
+.blinking-dots {
+    display: flex; /* Change to flex for horizontal alignment */
+    flex-direction: row; /* Change to column for vertical alignment */
+    align-items: center;
+    justify-content: flex-end; /* Align dots to the end */
+}
+
+.blinking-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    margin: 0 2px; /* Space between dots */
+    animation: blink 1s infinite alternate;
+}
+
+.blinking-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.blinking-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.queued-status {
+    color: #f44336; /* Change color to red for queued */
+    font-weight: bold; /* Make it bold */
+}
+
+.queued-dots {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: flex-end; 
+}
+
+.queued-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f44336; /* Same red color as text */
+    margin: 0 2px; /* Space between dots */
+    animation: pulse 1s infinite alternate; /* Pulse animation */
+}
+
+.queued-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.queued-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
